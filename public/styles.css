@@ -1,0 +1,41 @@
+:root{
+  --bg:#f6f8fb; --card:#fff; --accent:#2563eb; --muted:#6b7280;
+  --success:#065f46; --error:#b91c1c; --shadow: 0 8px 30px rgba(16,24,40,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#0f172a;-webkit-font-smoothing:antialiased}
+.container{max-width:920px;margin:36px auto;padding:20px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo-mark{
+  width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.18);
+}
+.brand-text h1{margin:0;font-size:1.25rem}
+.tag{color:var(--muted);font-size:0.85rem}
+.status{font-size:0.9rem;color:var(--muted)}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);margin-top:18px}
+.form label{display:block;margin:10px 0}
+.label-text{display:block;font-weight:600;margin-bottom:6px}
+input,select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #eef2f6;font-size:0.95rem}
+.actions{margin-top:12px;display:flex;gap:8px}
+button{background:var(--accent);color:white;border:none;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer}
+button:disabled{opacity:.6;cursor:not-allowed}
+.message{margin-top:12px;padding:10px;border-radius:8px}
+.message.error{background:rgba(185,28,28,0.06);color:var(--error);border:1px solid rgba(185,28,28,0.12)}
+.message.success{background:rgba(6,95,70,0.06);color:var(--success);border:1px solid rgba(6,95,70,0.12)}
+ul{margin:0;padding-left:1rem}
+li{margin:6px 0}
+footer.muted{margin-top:18px;color:var(--muted);text-align:center}
+
+/* responsive */
+@media (max-width:640px){
+  .container{padding:14px}
+  .topbar{flex-direction:column;align-items:flex-start;gap:8px}
+  .logo-mark{width:48px;height:48px}
+}
+
+/* small focus animation */
+input:focus,select:focus,button:focus{outline:3px solid rgba(37,99,235,0.08)}
