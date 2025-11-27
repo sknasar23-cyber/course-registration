@@ -3,54 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Course Registration — Demo</title>
-  <link rel="icon" href="favicon.png" />
-  <meta name="description" content="Simple college course registration demo (Node + Express + SQLite)" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Deccan College — Course Registration</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <main class="container">
+  <div id="app">
+    <!-- Header -->
     <header class="topbar">
-      <div class="brand">
-        <div class="logo-mark" aria-hidden="true">CE</div>
-        <div class="brand-text">
-          <h1>Course Registration</h1>
-          <div class="tag">Eminent College — Demo</div>
+      <div class="container topbar-inner">
+        <div class="logo-wrap">
+          <img src="/logo.png" alt="Deccan College" class="logo-img" onerror="this.style.display='none'"/>
+          <div class="logo-text">Deccan College</div>
         </div>
+        <nav class="navlinks" id="navlinks"></nav>
       </div>
-      <div class="status" id="statusBox">Loading…</div>
     </header>
 
-    <section class="card" id="courses-section">
-      <h2>Available courses</h2>
-      <div id="courses">Loading courses...</div>
-    </section>
+    <!-- Main content -->
+    <main class="container" id="main"></main>
 
-    <section class="card">
-      <h2>Register</h2>
-      <form id="regForm" class="form" autocomplete="off">
-        <label>
-          <span class="label-text">Name</span>
-          <input name="name" placeholder="Your full name" required />
-        </label>
-        <label>
-          <span class="label-text">Email</span>
-          <input name="email" type="email" placeholder="you@example.com" required />
-        </label>
-        <label>
-          <span class="label-text">Course</span>
-          <select name="course_id" required></select>
-        </label>
-        <div class="actions">
-          <button type="submit" id="submitBtn">Register</button>
-        </div>
-      </form>
-      <div id="message" class="message" role="status" aria-live="polite"></div>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">© Deccan College</div>
+    </footer>
+  </div>
 
-    <footer class="muted small">Built for college project • Node.js · Express · SQLite</footer>
-  </main>
-
-  <script src="main.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 </html>
